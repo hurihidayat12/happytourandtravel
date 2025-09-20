@@ -10,16 +10,31 @@
 <body>
 
 <!-- Navbar -->
+<!-- HEADER -->
 <header>
-    <div class="logo">HAPPY TOUR AND TRAVEL</div>
-    <nav>
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <div class="logo">HAPPY TOUR AND TRAVEL</div>
+  <nav id="navbar">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
 </header>
+
+<script>
+  // Toggle menu mobile
+  const toggle = document.getElementById("menu-toggle");
+  const navbar = document.getElementById("navbar");
+
+  toggle.addEventListener("click", () => {
+    navbar.classList.toggle("show");
+  });
+</script>
+
   
 <!-- body -->
 <main>
@@ -314,7 +329,7 @@
 </main>
 <!-- finish body -->
 
- <!-- FOOTER -->
+<!-- FOOTER -->
 <footer>
   <div class="footer-container">
     <!-- Kolom 1 -->

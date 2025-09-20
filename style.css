@@ -39,6 +39,71 @@ header .logo {
 header nav {
   display: flex;
   flex-wrap: wrap;
+  transition: max-height 0.3s ease;
+}
+
+header nav a {
+  color: #fff;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+header nav a:hover,
+header nav a.active {
+  color: #ffcc00; /* aksen */
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  header nav {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background: #0d2550;
+    flex-direction: column;
+    width: 200px;
+    max-height: 0;
+    overflow: hidden;
+    border-radius: 0 0 8px 8px;
+  }
+
+  header nav.show {
+    max-height: 300px; /* muncul saat toggle */
+  }
+
+  header nav a {
+    margin: 12px;
+    padding: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+
+header .logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 header nav a {
@@ -278,7 +343,7 @@ header nav a.active {
   justify-content: center;
   align-items: center;
   padding: 80px 20px;
-  background: #f8f9fa;   /* abu muda biar kotak putihnya muncul */
+  background: #f8f9fa;
 }
 
 /* Kotak utama */
@@ -291,7 +356,7 @@ header nav a.active {
   padding: 40px;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  max-width: 1100px;     /* biar gak terlalu lebar */
+  max-width: 1100px;
   width: 100%;
 }
 
@@ -336,7 +401,7 @@ header nav a.active {
 .visi {
   margin-top: 30px;
   padding: 20px;
-  background: #f0f9ff;          /* biru muda lembut */
+  background: #f0f9ff;
   border-left: 5px solid #0077b6;
   border-radius: 12px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.08);
@@ -353,6 +418,59 @@ header nav a.active {
   font-size: 17px;
   line-height: 1.6;
 }
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+@media (max-width: 992px) {
+  .about-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .about-text {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .about-text p {
+    text-align: center;
+  }
+
+  .visi {
+    text-align: left; /* tetap rapi dibaca */
+  }
+
+  .about-image {
+    flex: 1 1 100%;
+    margin-top: 20px;
+  }
+
+  .about-text h2 {
+    font-size: 28px;
+  }
+
+  .visi h3 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-text h2 {
+    font-size: 24px;
+  }
+
+  .about-text p,
+  .visi p {
+    font-size: 15px;
+  }
+
+  .about-card {
+    padding: 20px 15px;
+  }
+}
+
 
 
 /* home section */

@@ -8,16 +8,30 @@
 </head>
 <body>
 
-  <header>
-    <div class="logo">HAPPY TOUR AND TRAVEL</div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html"  class="active">About</a>
-      <a href="services.html">Services</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+<!-- HEADER -->
+<header>
+  <div class="logo">HAPPY TOUR AND TRAVEL</div>
+  <nav id="navbar">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
+  </div>
+</header>
+
+<script>
+  // Toggle menu mobile
+  const toggle = document.getElementById("menu-toggle");
+  const navbar = document.getElementById("navbar");
+
+  toggle.addEventListener("click", () => {
+    navbar.classList.toggle("show");
+  });
+</script>
 
   <section class="about-wrapper">
   <div class="about-card">
@@ -50,15 +64,117 @@
   </div>
 </section>
 
-
 <footer>
-  <p>&copy; 2025 Happy Tour and Travel. All Rights Reserved.</p>
-  <div class="social">
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-whatsapp"></i></a>
+  <div class="footer-container">
+    <!-- Kolom 1 -->
+    <div class="footer-col">
+      <h3>Happy<span>Travel</span></h3>
+      <p>
+        Botania Garden Blok B no 8<br>
+        Batam, Kepulauan Riau<br>
+        Indonesia
+      </p>
+      <p>📞 +62 812-6101-6193</p>
+      <p>📞 +62 853-5574-8039</p>
+      <p>✉️ support@happytravel.com</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+
+    <!-- Kolom 2 -->
+    <div class="footer-col">
+      <h4>Navigasi</h4>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Galeri</a></li>
+        <li><a href="contact.html">Kontak</a></li>
+      </ul>
+    </div>
+
+    <!-- Kolom 3 -->
+    <div class="footer-col">
+      <h4>Metode Pembayaran</h4>
+      <p>Kami menerima pembayaran dengan metode aman:</p>
+      <div class="payment-icons">
+        <img src="https://upload.wikimedia.org/wikipedia/id/thumb/5/55/BNI_logo.svg/300px-BNI_logo.svg.png?20240305030303" alt="BNI">
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Happy Travel. All Rights Reserved.</p>
   </div>
 </footer>
+
+<!-- Tambahkan FontAwesome -->
+<script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
+
+<style>
+  footer {
+    background: #0a1f44;
+    color: #fff;
+    padding: 50px 20px 20px;
+  }
+  .footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+  .footer-col h3, .footer-col h4 {
+    margin-bottom: 15px;
+    font-weight: 600;
+  }
+  .footer-col h3 span {
+    color: #fbc531;
+  }
+  .footer-col p {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+  .footer-col ul {
+    list-style: none;
+  }
+  .footer-col ul li {
+    margin-bottom: 8px;
+  }
+  .footer-col ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  .footer-col ul li a:hover {
+    color: #fbc531;
+  }
+  .social-icons a {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-right: 12px;
+    transition: color 0.3s ease;
+  }
+  .social-icons a:hover {
+    color: #fbc531;
+  }
+  .payment-icons img {
+    width: 60px;
+    margin-right: 10px;
+    margin-top: 10px;
+    filter: brightness(0) invert(1);
+  }
+  .footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-top: 30px;
+    padding-top: 15px;
+    font-size: 0.9rem;
+  }
+</style>
 
 </body>
 </html>
