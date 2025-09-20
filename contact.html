@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak Kami - Happy Tour and Travel</title>
+  <link rel="stylesheet" href="/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="logo">HAPPY TOUR AND TRAVEL</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1>Kontak Kami</h1>
+    <p>Hubungi kami untuk informasi paket wisata dan reservasi</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <div class="contact-container">
+      <!-- Contact Info -->
+      <div class="contact-info card">
+        <h2>Info Kontak</h2>
+        <p><i class="ri-map-pin-2-fill"></i>Botania Garden Blok B no 8, Batam City</p>
+        <p><i class="ri-phone-fill"></i> +62 812 3456 7890</p>
+        <p><i class="ri-phone-fill"></i> +62 812 3456 7890</p>
+        <p><i class="ri-mail-fill"></i> info@happytourandtravel.com</p>
+        <p><i class="ri-time-fill"></i> Senin - Minggu (08.00 - 22.00)</p>
+      </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form card">
+        <h2>Kirim Pesan</h2>
+        <form onsubmit="return sendMessage(event)">
+          <input type="text" placeholder="Nama Anda" required>
+          <input type="email" placeholder="Email Anda" required>
+          <textarea placeholder="Pesan Anda" rows="5" required></textarea>
+          <button type="submit"><i class="ri-send-plane-fill"></i> Kirim</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Google Maps Embed -->
+    <div class="map">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d249.31510494283017!2d104.01173083097187!3d1.1305202457644001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d989d6c51418f5%3A0x2e26137a1cef5445!2sBotania%20Garden%20Blk%20B!5e0!3m2!1sid!2sid!4v1758374849866!5m2!1sid!2sid"
+        allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Happy Tour and Travel</p>
+  </footer>
+
+  <script>
+    function sendMessage(event) {
+      event.preventDefault();
+      alert("Terima kasih! Pesan Anda berhasil dikirim.");
+      return false;
+    }
+  </script>
+</body>
+</html>
