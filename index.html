@@ -34,6 +34,25 @@
   <div class="menu-toggle" id="menu-toggle">
     ☰
   </div>
+  <!-- Dropdown Pilihan Bahasa -->
+<div id="languageSelector" class="language-dropdown">
+  <label for="google_translate_element" class="lang-label">🌐</label>
+  <div id="google_translate_element"></div>
+</div>
+
+<!-- Google Translate Script -->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'id',
+    includedLanguages: 'id,en,ms,ja,fr,zh-CN',
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    autoDisplay: false
+  }, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </header>
 
 <script>
@@ -44,6 +63,8 @@
   toggle.addEventListener("click", () => {
     navbar.classList.toggle("show");
   });
+
+  
 </script>
 
   
@@ -175,10 +196,17 @@
     
     <div class="paket-scroll">
       <div class="paket-card">
+        <img src="/aset/services/Lombok.png" alt="Travel Lombok">
+        <h3>Paket Tour Lombok</h3>
+        <a href="lombo.html" class="btn-paket">Lihat Detail</a>
+      </div>
+
+      <div class="paket-card">
         <img src="/aset/services/private_batam.jpg" alt="Private Tour Batam">
         <h3>Private Tour Batam</h3>
         <a href="services.html" class="btn-paket">Lihat Detail</a>
       </div>
+    
       <div class="paket-card">
         <img src="/aset/services/singapore.jpg" alt="Singapura">
         <h3>Singapura Day Trip</h3>
@@ -453,6 +481,8 @@
     font-size: 0.9rem;
   }
 </style>
+
+
 
 </body>
 </html>
